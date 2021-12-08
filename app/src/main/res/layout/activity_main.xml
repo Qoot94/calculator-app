@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAECEC"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:background="#DFA09E"
+            android:padding="5dp"
+            android:textAlignment="textEnd"
+            android:textColor="#795548"
+            android:textSize="30sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btSeven"
+                    style="@style/ButtonNumber"
+                    android:text="7"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btEight"
+                    style="@style/ButtonNumber"
+                    android:text="8"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btNine"
+                    style="@style/ButtonNumber"
+                    android:text="9"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btSlash"
+                    style="@style/ButtonOperator"
+                    android:backgroundTint="#007671"
+                    android:text="@string/divide_string" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btFour"
+                    style="@style/ButtonNumber"
+                    android:text="4"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btFive"
+                    style="@style/ButtonNumber"
+                    android:text="5"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btSix"
+                    style="@style/ButtonNumber"
+                    android:text="6"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btMultiply"
+                    style="@style/ButtonOperator"
+                    android:backgroundTint="#157470"
+                    android:text="*" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btOne"
+                    style="@style/ButtonNumber"
+                    android:text="1"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btTwo"
+                    style="@style/ButtonNumber"
+                    android:text="2"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btThree"
+                    style="@style/ButtonNumber"
+                    android:text="3"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btSub"
+                    style="@style/ButtonOperator"
+                    android:backgroundTint="#358F80"
+                    android:text="@string/_min"
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btNegPos"
+                    style="@style/ButtonNumber"
+                    android:backgroundTint="#459D89"
+                    android:text="±"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btZero"
+                    style="@style/ButtonNumber"
+                    android:text="0"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btDecimal"
+                    style="@style/ButtonNumber"
+                    android:backgroundTint="#459D89"
+                    android:text="."
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btAdd"
+                    style="@style/ButtonOperator"
+                    android:backgroundTint="#459D89"
+                    android:text="+"
+                    tools:ignore="TextContrastCheck" />
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btDel"
+
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="#007671"
+                android:text="@string/del"
+                android:onClick="spaceAction"/>
+
+            <Button
+                android:id="@+id/btReset"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="#007671"
+                android:onClick="clearAll"
+                android:text="@string/c" />
+
+            <Button
+                android:id="@+id/btEqual"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="#007671"
+                android:text="="
+                android:onClick="showResult"
+                android:textColor="#FFD166" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

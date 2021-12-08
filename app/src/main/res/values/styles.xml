@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"-->
+<resources>
+    <style name="ButtonNumber">
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:onClick">numberPressed</item>
+    </style>
+    <style name="ButtonOperator">
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:onClick">operatorPressed</item>
+    </style>
+</resources>
